@@ -4,7 +4,7 @@
 
 | Name | Email |
 |-----:|---------------|
-|Truman Boles|  |
+|Truman Boles| ui22021 |
 |Jun Yuan Lim|  |
 |Ruiyang Ma|  |
 |Natsumi Ota|  |
