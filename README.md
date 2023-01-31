@@ -5,7 +5,7 @@
 | Name | Email |
 |-----:|---------------|
 |Truman Boles| ui22021 |
-|Jun Yuan Lim|  |
+|Jun Yuan Lim| mg22569 |
 |Ruiyang Ma| wd22099 |
 |Natsumi Ota|  |
 |Zhenhai Qi| lc22175 |
