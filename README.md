@@ -6,7 +6,7 @@
 |-----:|---------------|
 |Truman Boles| ui22021 |
 |Jun Yuan Lim|  |
-|Ruiyang Ma|  |
+|Ruiyang Ma| wd22099 |
 |Natsumi Ota|  |
 |Zhenhai Qi| lc22175 |
 |Zhuobing Yang|  |
