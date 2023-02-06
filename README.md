@@ -7,7 +7,7 @@
 |Truman Boles| ui22021 |
 |Jun Yuan Lim| mg22569 |
 |Ruiyang Ma| wd22099 |
-|Natsumi Ota|  |
+|Natsumi Ota| yu22238  |
 |Zhenhai Qi| lc22175 |
 |Zhuobing Yang|  |
 
