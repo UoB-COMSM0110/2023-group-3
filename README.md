@@ -9,7 +9,7 @@
 |Ruiyang Ma| wd22099 |
 |Natsumi Ota| yu22238  |
 |Zhenhai Qi| lc22175 |
-|Zhuobing Yang|  |
+|Zhuobing Yang| om22207 |
 
 ## Team photo:
 
