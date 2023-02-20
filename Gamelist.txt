@@ -1,8 +1,10 @@
 -Donkey Kong Game
 https://freekong.org/
-Challenge1:Barrel with AI (chasing Mario)
+Twist:Barrel with AI (chasing Mario)
+
+Challenge1:Barrel AI
 Challenge2:Data structure for storing maps
-Challenge3:Mario falls a floor when Donkey Kong causes an earthquake.
+Challenge3:Collision detection
 
 -Candy crush
 
