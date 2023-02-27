@@ -5,6 +5,8 @@ void setup(){
 
   // Create objects
   /* Test Ladder class, please feel free to change if you need :) */
+  Carrot carrot = new Carrot(100, 100);
+  carrot.draw();
   Ladder ladder = new Ladder(100, 800); 
   ladder.draw(); 
   Ladder ladder2 = new Ladder(400, 800); 
