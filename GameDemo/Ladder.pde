@@ -1,10 +1,8 @@
 PImage ladder;
 
-class Ladder{
-  float x;
-  float y;
-  float halfHeight = 0.075;
-  float halfWidth = 0.015;
+public class Ladder{
+  private float x;
+  private float y;
   
   Ladder(float x, float y){
     this.x = x;
