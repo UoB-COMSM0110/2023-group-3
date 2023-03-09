@@ -188,7 +188,7 @@ public class Rabbit {
                 min = temp;
             }   
         }
-        y = closest + halfHeight + Floor.getHeight();
+        y = closest + halfHeight + f[0].getHeight();
         velY = 0.0;
     }
     
