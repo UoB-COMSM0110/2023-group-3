@@ -1,8 +1,8 @@
 -Donkey Kong Game
 https://freekong.org/
-Twist:Barrel with AI (chasing Mario)
+Twist: Hidden carrot in the box (need a key to open it)
 
-Challenge1:Barrel AI
+Challenge1:randomly allocated key and box
 Challenge2:Data structure for storing maps
 Challenge3:Collision detection
 
