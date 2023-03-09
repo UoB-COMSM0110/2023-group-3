@@ -1,6 +1,8 @@
 public class Floor{
   private float x;
   private float y;
+  private static final float halfWidth = 714;
+  private static final float halfHeight = 40;
   
   Floor(float x, float y){
     this.x = x;
@@ -21,7 +23,26 @@ public class Floor{
     this.y = y;
   }
   
+  public float getWidth() {
+    return halfWidth; 
+  }
+  public float getHeight() { 
+    return halfHeight;
+  }
+  
   void draw(){
-    image(loadImage("floor.png"), x, y, width/1.4, height/25);
+    image(loadImage("floor.png"), x, y, halfWidth, halfHeight);
+  }
+  
+  public boolean collision(Rabbit rabbit) {
+    return (rabbit.getY() - rabbit.getHalfHeight() <= y + halfHeight &&
+            rabbit.getY() >= y && rabbit.getX() <= x + halfWidth &&
+            rabbit.getX() >= x - halfWidth);
+  }
+  
+  public boolean collision(Stone stone) {
+    return (stone.getY() - stone.getRadius() <= y + halfHeight &&
+            stone.getY() >= y && stone.getX() <= x + halfWidth &&
+            stone.getX() >= x - halfWidth);
   }
 }
