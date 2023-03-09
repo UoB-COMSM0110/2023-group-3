@@ -1,4 +1,4 @@
-
+//this pde do not have following
 class Stone {
   
   
