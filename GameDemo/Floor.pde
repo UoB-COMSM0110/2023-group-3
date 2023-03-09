@@ -1,8 +1,8 @@
 public class Floor{
   private float x;
   private float y;
-  private static final float halfWidth = 714;
-  private static final float halfHeight = 40;
+  private float halfWidth = 714;
+  private float halfHeight = 40;
   
   Floor(float x, float y){
     this.x = x;
