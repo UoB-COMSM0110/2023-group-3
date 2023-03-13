@@ -1,25 +1,27 @@
+//still fixing following algorithm, please use aother Stone class to test
 
-class Stone {
+public class Stone{
   
     private float x, y;
-    private PImage stoneImage;    
+    private PImage stoneImage;
     private float velX = 0.005;
     private float velY;
     private float fallVel = 0.01;
     private static final float radius = 0.025;
     private int floorLevel = 0;
     private int angle = 0;
-    private Rabbit rabbit; // new field to store the Rabbit object to follow
+    private Rabbit rabbit;
+    private boolean following = true;
     
-    Stone(float x, float y, Rabbit rabbit) { // modified constructor to accept a Rabbit object
+    Stone(float x, float y, Rabbit rabbit) { 
         this.x = x;
         this.y = y;
         this.rabbit = rabbit;
         stoneImage = loadImage("stone.png");
     }
-  
-    void draw() {
-        image(stoneImage, width/2 - stoneImage.width/2, 0);
+    
+    public void draw() {
+        image(stoneImage, x, y);
     }
     
     public void rollRight() {
@@ -28,8 +30,8 @@ class Stone {
 
     public void rollLeft() {
         x -= velX;
-    }  
-    
+    }
+
     public float getX() {
         return x;
     }
@@ -37,11 +39,11 @@ class Stone {
     public float getY() {
         return y;
     }
-    
+
     public int getFloorLevel() {
         return floorLevel;
     }
-    
+
     public void setFloorLevel(int floorLevel) {
         this.floorLevel = floorLevel;
     }
@@ -49,19 +51,19 @@ class Stone {
     public float getVelY() {
         return velY;
     }
-    
+
     public float getRadius() {
         return radius;
     }
-    
+
     public void updateY() {
         y += velY;
     }
 
     public void fall() {
-        velY -= 0.001;
+        velY -= fallVel;
     }
-    
+
     public void stop(Floor[] f) {
         velY = 0.0;
         y = f[floorLevel].getHeight() + f[floorLevel].getY() + radius;
@@ -76,9 +78,38 @@ class Stone {
         }
         return floorCollide;
     }
+
+    public void followRabbit(int duration) {
+        if (following && rabbit != null && rabbit.getFloorLevel() == floorLevel) {
+            if (x < rabbit.getX()) {
+                rollRight();
+            } else if (x > rabbit.getX()) {
+                rollLeft();
+            }
+            duration--;
+            if (duration <= 0) {
+                following = false;
+            }
+        }
+    }
     
-    public void followRabbit() { // new method to update position based on Rabbit's position
-        x = rabbit.getX() + rabbit.getVelX(); // set x to Rabbit's x position plus Rabbit's x velocity
-        y = rabbit.getY() - radius; // set y to Rabbit's y position minus Stone's radius (to stay on top of Rabbit)
+    public static void main(String[] args) {
+        Stone b = new Stone(0.5f, 0.5f, null);
+        PImage stoneImage = loadImage("stone.png");
+        size(500, 500);
+        frameRate(30);
+
+       
+
+        int duration = 60;
+
+        while (duration > 0) {
+            clear();
+            b.draw();
+            b.fall();
+            b.updateY();
+            b.followRabbit(duration);
+            duration--;
+        }
     }
 }
