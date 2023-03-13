@@ -1,5 +1,3 @@
-PImage ladder;
-
 public class Ladder{
   private float x;
   private float y;
@@ -10,8 +8,7 @@ public class Ladder{
   }
   
   void draw(){
-    ladder = loadImage("ladder.png");
-    image(ladder, x, y, width/6, height/6);
+    image(loadImage("ladder.png"), x, y, width/6, height/6.8);
   }
   
   float getX(){
