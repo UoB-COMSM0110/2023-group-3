@@ -121,4 +121,4 @@ class Stone {
         }
         return floorCollide;
     }
-    
+ }   
